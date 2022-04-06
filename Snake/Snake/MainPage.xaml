@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Snake.MainPage"
+             BackgroundColor="Purple">
+    <StackLayout>
+        <Label Text="Your Score:" FontSize="46" HorizontalOptions="Center"
+           TextColor="GreenYellow" HeightRequest="70" Margin="0"></Label>
+        <Label x:Name="theScore" FontSize="46" HorizontalOptions="Center"
+           TextColor="GreenYellow" HeightRequest="70" Margin="0"></Label>
+    <Grid x:Name="snakeGrid"
+            RowDefinitions="1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*"
+            ColumnDefinitions="1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*, 1*"
+            BackgroundColor="DarkGreen"
+            Margin="7,0,7,0"
+            RowSpacing="0"
+            ColumnSpacing="0">
+    </Grid>
+    <StackLayout x:Name="diffStack" Orientation="Horizontal" Margin="7,12,7,0" HeightRequest="20" Padding="0">
+            <Label Text="Difficulty (snake speed)" TextColor="White" HorizontalOptions="StartAndExpand"></Label>
+            <Label x:Name="diffLabel" TextColor="White" HorizontalOptions="EndAndExpand"></Label>
+    </StackLayout>
+    <Slider x:Name="diffSlider" Maximum="5" Minimum="1" MinimumTrackColor="White"
+            ThumbColor="White" ValueChanged="Slider_ValueChanged" Margin="7,0,7,12"></Slider>
+    <Button x:Name="playButton" Text="Commence Reptilian Operations" Margin="7,0,7,7" HeightRequest="200"
+            TextColor="White" FontSize="33" BorderColor="White" BorderWidth="7"
+            BackgroundColor="Purple" Clicked="playButton_Clicked"></Button>
+    </StackLayout>
+</ContentPage>
